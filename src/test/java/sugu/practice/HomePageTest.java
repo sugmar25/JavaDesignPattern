@@ -23,7 +23,11 @@ public class HomePageTest {
     public void demoTest() throws InterruptedException {
         travelHomePage.goTo();
         System.out.println(travelHomePage.getNavigationBar().getFlightAttribute());
-
+        //travelHomePage.selectMultiTrip().selectRadioButton();
+        //travelHomePage.selectRoundTrip().clickRoundTrip();
+        travelHomePage.selectTrip("roundtrip");
+        travelHomePage.checkAvail("reservationDetails");
+        Thread.sleep(1000);
 
     }
 

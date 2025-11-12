@@ -28,13 +28,22 @@ public class AbstractComponents {
         wait.until(ExpectedConditions.presenceOfElementLocated(findBy));
     }
 
-    public void windowsMaximization(){
+    public void windowsMaximization()
+    {
         driver.manage().window().maximize();
     }
 
     public List<WebElement> findElements(By findElementBy){
+
         return sectionElement.findElements(findElementBy);
     }
+
+    public void waitForElementToDisappear(By findBy)
+    {
+        WebDriverWait wait =new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
+    }
+
 
 
 }

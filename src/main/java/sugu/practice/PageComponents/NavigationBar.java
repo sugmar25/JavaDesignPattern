@@ -16,5 +16,6 @@ public class NavigationBar extends AbstractComponents {
         windowsMaximization();
         waitforElementToPresent(flights);
         return findElement(flights).getAttribute("class");
+
     }
 }
